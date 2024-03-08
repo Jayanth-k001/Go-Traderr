@@ -1,0 +1,52 @@
+.cont {
+    display: flex;
+    height: 100vh; /* 100% of viewport height */
+    justify-content: flex-start; /* Align items at the start of the flex container (left corner) */
+  }
+  
+  .left,
+  .right {
+    border: 1px solid black;
+  }
+  
+  .left {
+    flex: 0 0 300px; /* Set width of left container to 300px */
+    height: 450px; /* Set height of left container to 500px */
+    margin-left: 5%; /* Add margin to the left of left container (adjust as needed) */
+    border: 1px solid white;
+  }
+  
+  .right {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    border-left: 1px solid white;
+  }
+  
+  .right-top {
+    flex: 1;
+    border: 1px solid black;
+  }
+  
+  @media (max-width: 768px) {
+    .cont {
+      flex-direction: column;
+    }
+  
+    .left,
+    .right {
+      flex: none;
+      width: 100%;
+      margin: 0; /* Reset margin for mobile layout */
+    }
+  
+    .left {
+      height: 400px; /* Adjust height for mobile layout */
+    }
+  
+    .right {
+      height: calc(100vh - 200px); /* Adjust height for mobile layout */
+    }
+  }
+  
